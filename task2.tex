@@ -1,0 +1,106 @@
+\documentclass[12pt]{article}
+
+\usepackage[none]{hyphenat}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{caption}
+
+% Macros (same style as reference)
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\let\vec\mathbf
+
+\begin{document}
+
+% ---------- HEADER WITH LOGO ----------
+\noindent
+\begin{minipage}[c]{0.3\textwidth}
+\includegraphics[width=3.2cm]{logo.png}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.65\textwidth}
+\begin{flushright}
+\textbf{Name: Ranjita} \\[0.2cm]
+\textbf{ID: COMETFWC055} \\[0.2cm]
+\textbf{Date: 29/01/2026}
+\end{flushright}
+\end{minipage}
+
+\vspace{0.6cm}
+
+% ---------- SUMMARY CONTENT ----------
+\begin{itemize}
+
+\item Determinant of a matrix $A = [a_{11}]_{1\times1}$ is given by
+\[
+|A| = a_{11}
+\]
+
+\item Determinant of a matrix
+\[
+A =
+\begin{bmatrix}
+a_{11} & a_{12} \\
+a_{21} & a_{22}
+\end{bmatrix}
+\]
+is given by
+\[
+|A| =
+\begin{vmatrix}
+a_{11} & a_{12} \\
+a_{21} & a_{22}
+\end{vmatrix}
+= a_{11}a_{22} - a_{12}a_{21}
+\]
+
+\item Determinant of a $3 \times 3$ matrix is obtained by expanding along a row or a column.
+
+\item For any square matrix $A$, determinant satisfies the following properties:
+\begin{itemize}
+\item $|A^T| = |A|$
+\item Interchanging any two rows or columns changes the sign of determinant
+\item If any two rows or columns are identical or proportional, then $|A| = 0$
+\item If each element of a row or column is multiplied by $k$, then determinant is multiplied by $k$
+\end{itemize}
+
+\item Area of a triangle with vertices $(x_1,y_1)$, $(x_2,y_2)$ and $(x_3,y_3)$ is given by
+\[
+\Delta = \frac{1}{2}
+\begin{vmatrix}
+x_1 & y_1 & 1 \\
+x_2 & y_2 & 1 \\
+x_3 & y_3 & 1
+\end{vmatrix}
+\]
+
+\item Minor of an element $a_{ij}$ is obtained by deleting the $i^{th}$ row and $j^{th}$ column.
+
+\item Cofactor of $a_{ij}$ is defined as
+\[
+A_{ij} = (-1)^{i+j} M_{ij}
+\]
+
+\item Adjoint of a square matrix is the transpose of the matrix of cofactors.
+
+\item A square matrix is singular if $|A| = 0$ and non-singular if $|A| \neq 0$.
+
+\item Inverse of a non-singular matrix $A$ is given by
+\[
+A^{-1} = \frac{1}{|A|}(\text{adj }A)
+\]
+
+\item For matrix equation $AX = B$:
+\begin{itemize}
+\item If $|A| \neq 0$, unique solution exists
+\item If $|A| = 0$ and $(\text{adj }A)B \neq 0$, no solution exists
+\item If $|A| = 0$ and $(\text{adj }A)B = 0$, solution may or may not exist
+\end{itemize}
+
+\end{itemize}
+
+\end{document}
